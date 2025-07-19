@@ -7,108 +7,120 @@ const Index = () => {
   const products = [
     {
       id: 1,
-      name: "Мёд разнотравный",
-      description: "Натуральный мёд с полевых цветов",
+      name: "Мед різнотравний",
+      description: "Натуральний мед з польових квітів",
       price: "350 грн",
       volume: "500г",
-      image: "/img/c5ed961d-d033-4edf-aeed-e31a7248dc76.jpg"
+      image: "/img/2e2301b3-e5a0-41c7-a984-ba225d476a94.jpg"
     },
     {
       id: 2,
-      name: "Мёд акациевый",
-      description: "Светлый деликатесный мёд",
+      name: "Мед акацієвий",
+      description: "Світлий делікатесний мед",
       price: "420 грн",
       volume: "500г",
-      image: "/img/9e34e156-d4d6-41bb-b69f-25ae718d98e2.jpg"
+      image: "/img/a04d809b-1782-47c2-9a84-98e5296f0804.jpg"
     },
     {
       id: 3,
-      name: "Мёд гречишный",
-      description: "Тёмный мёд с насыщенным вкусом",
+      name: "Мед гречаний",
+      description: "Темний мед з насиченим смаком",
       price: "380 грн",
       volume: "500г",
-      image: "/img/9e34e156-d4d6-41bb-b69f-25ae718d98e2.jpg"
+      image: "/img/2e2301b3-e5a0-41c7-a984-ba225d476a94.jpg"
     }
   ];
 
   const reviews = [
     {
       name: "Анна К.",
-      text: "Прекрасный мёд! Покупаю уже третий раз.",
+      text: "Прекрасний мед! Купую вже втретє.",
       rating: 5
     },
     {
       name: "Дмитро М.",
-      text: "Качество отличное, доставка быстрая.",
+      text: "Якість відмінна, доставка швидка.",
       rating: 5
     },
     {
       name: "Ольга В.",
-      text: "Настоящий фермерский мёд, очень довольна!",
+      text: "Справжній фермерський мед, дуже задоволена!",
       rating: 5
     }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-honey-50 to-white">
+    <div className="min-h-screen bg-gradient-to-b from-amber-50 via-orange-50 to-yellow-50">
       {/* Header */}
-      <header className="bg-white shadow-sm border-b">
-        <div className="container mx-auto px-4 py-4">
+      <header className="bg-gradient-to-r from-amber-100 to-orange-100 shadow-lg border-b-4 border-amber-600">
+        <div className="container mx-auto px-4 py-6">
           <div className="flex items-center justify-between">
-            <div className="flex items-center space-x-2">
-              <Icon name="Hexagon" className="w-8 h-8 text-primary fill-current" />
+            <div className="flex items-center space-x-3">
+              <div className="bg-amber-600 p-3 rounded-full">
+                <Icon name="Flower2" className="w-8 h-8 text-white" />
+              </div>
               <div>
-                <h1 className="text-2xl font-bold text-gray-900">Добрі бджоли</h1>
-                <p className="text-sm text-gray-600">Натуральные продукты пчеловодства</p>
+                <h1 className="text-3xl font-bold text-amber-900 font-serif">Добрі бджоли</h1>
+                <p className="text-amber-700 font-medium">Натуральні продукти бджільництва</p>
               </div>
             </div>
-            <nav className="hidden md:flex space-x-6">
-              <a href="#catalog" className="text-gray-700 hover:text-primary transition-colors">Каталог</a>
-              <a href="#about" className="text-gray-700 hover:text-primary transition-colors">О ферме</a>
-              <a href="#delivery" className="text-gray-700 hover:text-primary transition-colors">Доставка</a>
-              <a href="#contacts" className="text-gray-700 hover:text-primary transition-colors">Контакты</a>
+            <nav className="hidden md:flex space-x-8">
+              <a href="#catalog" className="text-amber-800 hover:text-amber-600 transition-colors font-semibold">Каталог</a>
+              <a href="#about" className="text-amber-800 hover:text-amber-600 transition-colors font-semibold">Про ферму</a>
+              <a href="#delivery" className="text-amber-800 hover:text-amber-600 transition-colors font-semibold">Доставка</a>
+              <a href="#contacts" className="text-amber-800 hover:text-amber-600 transition-colors font-semibold">Контакти</a>
             </nav>
-            <Button className="flex items-center space-x-2">
-              <Icon name="ShoppingCart" size={20} />
-              <span>Корзина</span>
+            <Button className="flex items-center space-x-2 bg-amber-600 hover:bg-amber-700 shadow-lg">
+              <Icon name="ShoppingBasket" size={20} />
+              <span className="font-semibold">Кошик</span>
             </Button>
           </div>
         </div>
       </header>
 
       {/* Hero Section */}
-      <section className="py-16 lg:py-24">
-        <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+      <section className="py-20 lg:py-32 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-amber-100 via-orange-100 to-yellow-100"></div>
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
-              <h2 className="text-4xl lg:text-6xl font-bold text-gray-900 mb-6">
-                Натуральный мёд с собственной пасеки
+              <div className="inline-flex items-center bg-amber-200 text-amber-800 px-4 py-2 rounded-full mb-6 font-semibold">
+                <Icon name="Award" className="w-5 h-5 mr-2" />
+                100% натуральний продукт
+              </div>
+              <h2 className="text-5xl lg:text-7xl font-bold text-amber-900 mb-8 font-serif leading-tight">
+                Справжній український мед
               </h2>
-              <p className="text-xl text-gray-600 mb-8">
-                Пчелоферма "Добрі бджоли" предлагает качественные продукты пчеловодства. 
-                Мёд собирается с экологически чистых угодий Украины.
+              <p className="text-xl text-amber-800 mb-10 leading-relaxed">
+                Пасіка "Добрі бджоли" пропонує якісні продукти бджільництва. 
+                Мед збирається з екологічно чистих угідь України за традиційними методами.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" className="text-lg">
-                  Посмотреть каталог
+              <div className="flex flex-col sm:flex-row gap-6">
+                <Button size="lg" className="text-lg bg-amber-600 hover:bg-amber-700 shadow-xl px-8 py-4">
+                  <Icon name="Eye" className="mr-2" />
+                  Переглянути каталог
                 </Button>
-                <Button variant="outline" size="lg" className="text-lg">
-                  Узнать больше
+                <Button variant="outline" size="lg" className="text-lg border-2 border-amber-600 text-amber-800 hover:bg-amber-50 px-8 py-4">
+                  <Icon name="Heart" className="mr-2" />
+                  Дізнатися більше
                 </Button>
               </div>
             </div>
             <div className="relative">
+              <div className="absolute -inset-4 bg-gradient-to-r from-amber-400 to-orange-400 rounded-3xl opacity-20 blur"></div>
               <img 
-                src="/img/ecbda237-79d2-452d-a169-8a7736575146.jpg" 
-                alt="Пчелоферма" 
-                className="rounded-2xl shadow-2xl w-full h-[500px] object-cover"
+                src="/img/55e03054-a65f-418e-ac70-aa5a1e2db668.jpg" 
+                alt="Пасіка" 
+                className="rounded-3xl shadow-2xl w-full h-[600px] object-cover relative z-10 border-8 border-white"
               />
-              <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-xl shadow-lg">
-                <div className="flex items-center space-x-3">
-                  <Icon name="Award" className="text-primary w-8 h-8" />
+              <div className="absolute -bottom-8 -left-8 bg-white p-8 rounded-2xl shadow-2xl border-4 border-amber-200 z-20">
+                <div className="flex items-center space-x-4">
+                  <div className="bg-amber-100 p-4 rounded-full">
+                    <Icon name="Leaf" className="text-amber-600 w-8 h-8" />
+                  </div>
                   <div>
-                    <p className="font-semibold">100% натурально</p>
-                    <p className="text-sm text-gray-600">Без добавок</p>
+                    <p className="font-bold text-amber-900 text-lg">Екологічно чисто</p>
+                    <p className="text-amber-700">Без хімікатів</p>
                   </div>
                 </div>
               </div>
@@ -118,35 +130,46 @@ const Index = () => {
       </section>
 
       {/* Products Catalog */}
-      <section id="catalog" className="py-16 bg-white">
+      <section id="catalog" className="py-20 bg-gradient-to-b from-white to-amber-50">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h3 className="text-3xl font-bold text-gray-900 mb-4">Популярные сорта мёда</h3>
-            <p className="text-lg text-gray-600">Выберите свой любимый вкус из нашей коллекции</p>
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center bg-amber-200 text-amber-800 px-4 py-2 rounded-full mb-6 font-semibold">
+              <Icon name="Sparkles" className="w-5 h-5 mr-2" />
+              Наші продукти
+            </div>
+            <h3 className="text-4xl font-bold text-amber-900 mb-6 font-serif">Популярні сорти меду</h3>
+            <p className="text-xl text-amber-700 max-w-2xl mx-auto">Оберіть свій улюблений смак з нашої колекції натурального українського меду</p>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
             {products.map((product) => (
-              <Card key={product.id} className="group hover:shadow-lg transition-shadow duration-300">
-                <CardHeader className="p-0">
+              <Card key={product.id} className="group hover:shadow-2xl transition-all duration-500 bg-white border-4 border-amber-200 hover:border-amber-400 rounded-2xl overflow-hidden">
+                <CardHeader className="p-0 relative">
                   <img 
                     src={product.image} 
                     alt={product.name}
-                    className="w-full h-64 object-cover rounded-t-lg group-hover:scale-105 transition-transform duration-300"
+                    className="w-full h-72 object-cover group-hover:scale-110 transition-transform duration-500"
                   />
-                </CardHeader>
-                <CardContent className="p-6">
-                  <div className="flex justify-between items-start mb-2">
-                    <CardTitle className="text-xl">{product.name}</CardTitle>
-                    <Badge variant="secondary">{product.volume}</Badge>
+                  <div className="absolute top-4 right-4">
+                    <Badge className="bg-amber-600 text-white text-sm px-3 py-1 font-semibold">{product.volume}</Badge>
                   </div>
-                  <CardDescription className="mb-4">{product.description}</CardDescription>
-                  <p className="text-2xl font-bold text-primary">{product.price}</p>
+                </CardHeader>
+                <CardContent className="p-8">
+                  <CardTitle className="text-2xl mb-3 text-amber-900 font-serif">{product.name}</CardTitle>
+                  <CardDescription className="mb-6 text-amber-700 text-lg">{product.description}</CardDescription>
+                  <div className="flex items-center justify-between">
+                    <p className="text-3xl font-bold text-amber-800">{product.price}</p>
+                    <div className="flex space-x-1">
+                      {[...Array(5)].map((_, i) => (
+                        <Icon key={i} name="Star" className="w-5 h-5 text-yellow-400 fill-current" />
+                      ))}
+                    </div>
+                  </div>
                 </CardContent>
-                <CardFooter className="p-6 pt-0">
-                  <Button className="w-full" size="lg">
-                    <Icon name="ShoppingCart" className="mr-2" size={18} />
-                    В корзину
+                <CardFooter className="p-8 pt-0">
+                  <Button className="w-full text-lg bg-amber-600 hover:bg-amber-700 shadow-lg py-3">
+                    <Icon name="ShoppingBasket" className="mr-2" size={20} />
+                    У кошик
                   </Button>
                 </CardFooter>
               </Card>
@@ -156,50 +179,68 @@ const Index = () => {
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-16 bg-honey-50">
+      <section id="about" className="py-20 bg-gradient-to-r from-amber-100 via-orange-100 to-yellow-100">
         <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
-              <h3 className="text-3xl font-bold text-gray-900 mb-6">О нашей ферме</h3>
-              <p className="text-lg text-gray-700 mb-6">
-                Пчелоферма "Добрі бджоли" работает уже более 15 лет. Мы следуем традиционным 
-                методам пчеловодства и заботимся о качестве нашей продукции.
+              <div className="inline-flex items-center bg-amber-200 text-amber-800 px-4 py-2 rounded-full mb-6 font-semibold">
+                <Icon name="Home" className="w-5 h-5 mr-2" />
+                Наша історія
+              </div>
+              <h3 className="text-4xl font-bold text-amber-900 mb-8 font-serif">Про нашу пасіку</h3>
+              <p className="text-xl text-amber-800 mb-8 leading-relaxed">
+                Пасіка "Добрі бджоли" працює вже понад 15 років. Ми дотримуємося традиційних 
+                методів бджільництва та дбаємо про якість нашої продукції за старими українськими рецептами.
               </p>
-              <div className="space-y-4">
-                <div className="flex items-center space-x-3">
-                  <Icon name="CheckCircle" className="text-primary w-6 h-6" />
-                  <span>Экологически чистые угодья</span>
+              <div className="space-y-6">
+                <div className="flex items-center space-x-4">
+                  <div className="bg-amber-600 p-2 rounded-full">
+                    <Icon name="CheckCircle" className="text-white w-6 h-6" />
+                  </div>
+                  <span className="text-lg text-amber-800 font-semibold">Екологічно чисті угіддя</span>
                 </div>
-                <div className="flex items-center space-x-3">
-                  <Icon name="CheckCircle" className="text-primary w-6 h-6" />
-                  <span>Традиционные методы</span>
+                <div className="flex items-center space-x-4">
+                  <div className="bg-amber-600 p-2 rounded-full">
+                    <Icon name="CheckCircle" className="text-white w-6 h-6" />
+                  </div>
+                  <span className="text-lg text-amber-800 font-semibold">Традиційні методи</span>
                 </div>
-                <div className="flex items-center space-x-3">
-                  <Icon name="CheckCircle" className="text-primary w-6 h-6" />
-                  <span>Контроль качества</span>
+                <div className="flex items-center space-x-4">
+                  <div className="bg-amber-600 p-2 rounded-full">
+                    <Icon name="CheckCircle" className="text-white w-6 h-6" />
+                  </div>
+                  <span className="text-lg text-amber-800 font-semibold">Контроль якості</span>
                 </div>
               </div>
             </div>
-            <div className="grid grid-cols-2 gap-4">
-              <div className="bg-white p-6 rounded-xl text-center">
-                <Icon name="Calendar" className="w-12 h-12 text-primary mx-auto mb-4" />
-                <p className="text-2xl font-bold text-gray-900">15+</p>
-                <p className="text-gray-600">лет опыта</p>
+            <div className="grid grid-cols-2 gap-6">
+              <div className="bg-white p-8 rounded-2xl text-center shadow-xl border-4 border-amber-200">
+                <div className="bg-amber-100 p-4 rounded-full w-fit mx-auto mb-4">
+                  <Icon name="Calendar" className="w-12 h-12 text-amber-600" />
+                </div>
+                <p className="text-3xl font-bold text-amber-900">15+</p>
+                <p className="text-amber-700 font-semibold">років досвіду</p>
               </div>
-              <div className="bg-white p-6 rounded-xl text-center">
-                <Icon name="Users" className="w-12 h-12 text-primary mx-auto mb-4" />
-                <p className="text-2xl font-bold text-gray-900">1000+</p>
-                <p className="text-gray-600">покупателей</p>
+              <div className="bg-white p-8 rounded-2xl text-center shadow-xl border-4 border-amber-200">
+                <div className="bg-amber-100 p-4 rounded-full w-fit mx-auto mb-4">
+                  <Icon name="Users" className="w-12 h-12 text-amber-600" />
+                </div>
+                <p className="text-3xl font-bold text-amber-900">1000+</p>
+                <p className="text-amber-700 font-semibold">покупців</p>
               </div>
-              <div className="bg-white p-6 rounded-xl text-center">
-                <Icon name="Hexagon" className="w-12 h-12 text-primary mx-auto mb-4" />
-                <p className="text-2xl font-bold text-gray-900">50+</p>
-                <p className="text-gray-600">ульев</p>
+              <div className="bg-white p-8 rounded-2xl text-center shadow-xl border-4 border-amber-200">
+                <div className="bg-amber-100 p-4 rounded-full w-fit mx-auto mb-4">
+                  <Icon name="Flower2" className="w-12 h-12 text-amber-600" />
+                </div>
+                <p className="text-3xl font-bold text-amber-900">50+</p>
+                <p className="text-amber-700 font-semibold">вуликів</p>
               </div>
-              <div className="bg-white p-6 rounded-xl text-center">
-                <Icon name="Award" className="w-12 h-12 text-primary mx-auto mb-4" />
-                <p className="text-2xl font-bold text-gray-900">100%</p>
-                <p className="text-gray-600">натурально</p>
+              <div className="bg-white p-8 rounded-2xl text-center shadow-xl border-4 border-amber-200">
+                <div className="bg-amber-100 p-4 rounded-full w-fit mx-auto mb-4">
+                  <Icon name="Award" className="w-12 h-12 text-amber-600" />
+                </div>
+                <p className="text-3xl font-bold text-amber-900">100%</p>
+                <p className="text-amber-700 font-semibold">натурально</p>
               </div>
             </div>
           </div>
@@ -207,24 +248,33 @@ const Index = () => {
       </section>
 
       {/* Reviews Section */}
-      <section className="py-16 bg-white">
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h3 className="text-3xl font-bold text-gray-900 mb-4">Отзывы покупателей</h3>
-            <p className="text-lg text-gray-600">Что говорят наши клиенты</p>
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center bg-amber-200 text-amber-800 px-4 py-2 rounded-full mb-6 font-semibold">
+              <Icon name="MessageCircle" className="w-5 h-5 mr-2" />
+              Відгуки
+            </div>
+            <h3 className="text-4xl font-bold text-amber-900 mb-6 font-serif">Що кажуть наші клієнти</h3>
+            <p className="text-xl text-amber-700">Щирі відгуки від тих, хто вже скуштував наш мед</p>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-10">
             {reviews.map((review, index) => (
-              <Card key={index}>
-                <CardContent className="p-6">
-                  <div className="flex mb-4">
+              <Card key={index} className="bg-gradient-to-br from-amber-50 to-orange-50 border-4 border-amber-200 rounded-2xl shadow-xl">
+                <CardContent className="p-8">
+                  <div className="flex mb-6">
                     {[...Array(review.rating)].map((_, i) => (
-                      <Icon key={i} name="Star" className="w-5 h-5 text-yellow-400 fill-current" />
+                      <Icon key={i} name="Star" className="w-6 h-6 text-yellow-400 fill-current" />
                     ))}
                   </div>
-                  <p className="text-gray-700 mb-4">"{review.text}"</p>
-                  <p className="font-semibold text-gray-900">{review.name}</p>
+                  <p className="text-amber-800 mb-6 text-lg italic">"{review.text}"</p>
+                  <div className="flex items-center space-x-3">
+                    <div className="bg-amber-600 p-2 rounded-full">
+                      <Icon name="User" className="w-6 h-6 text-white" />
+                    </div>
+                    <p className="font-bold text-amber-900 text-lg">{review.name}</p>
+                  </div>
                 </CardContent>
               </Card>
             ))}
@@ -233,102 +283,126 @@ const Index = () => {
       </section>
 
       {/* Delivery & Payment */}
-      <section id="delivery" className="py-16 bg-honey-50">
+      <section id="delivery" className="py-20 bg-gradient-to-r from-amber-100 via-orange-100 to-yellow-100">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h3 className="text-3xl font-bold text-gray-900 mb-4">Доставка и оплата</h3>
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center bg-amber-200 text-amber-800 px-4 py-2 rounded-full mb-6 font-semibold">
+              <Icon name="Package" className="w-5 h-5 mr-2" />
+              Доставка
+            </div>
+            <h3 className="text-4xl font-bold text-amber-900 mb-6 font-serif">Доставка та оплата</h3>
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="text-center">
-              <Icon name="Truck" className="w-12 h-12 text-primary mx-auto mb-4" />
-              <h4 className="font-semibold mb-2">Быстрая доставка</h4>
-              <p className="text-gray-600">По Украине 1-3 дня</p>
+            <div className="text-center bg-white p-8 rounded-2xl shadow-xl border-4 border-amber-200">
+              <div className="bg-amber-100 p-4 rounded-full w-fit mx-auto mb-6">
+                <Icon name="Truck" className="w-12 h-12 text-amber-600" />
+              </div>
+              <h4 className="font-bold mb-3 text-amber-900 text-xl">Швидка доставка</h4>
+              <p className="text-amber-700 font-semibold">По Україні 1-3 дні</p>
             </div>
-            <div className="text-center">
-              <Icon name="CreditCard" className="w-12 h-12 text-primary mx-auto mb-4" />
-              <h4 className="font-semibold mb-2">Удобная оплата</h4>
-              <p className="text-gray-600">Карта или наличные</p>
+            <div className="text-center bg-white p-8 rounded-2xl shadow-xl border-4 border-amber-200">
+              <div className="bg-amber-100 p-4 rounded-full w-fit mx-auto mb-6">
+                <Icon name="CreditCard" className="w-12 h-12 text-amber-600" />
+              </div>
+              <h4 className="font-bold mb-3 text-amber-900 text-xl">Зручна оплата</h4>
+              <p className="text-amber-700 font-semibold">Карта або готівка</p>
             </div>
-            <div className="text-center">
-              <Icon name="Shield" className="w-12 h-12 text-primary mx-auto mb-4" />
-              <h4 className="font-semibold mb-2">Гарантия качества</h4>
-              <p className="text-gray-600">100% натуральный продукт</p>
+            <div className="text-center bg-white p-8 rounded-2xl shadow-xl border-4 border-amber-200">
+              <div className="bg-amber-100 p-4 rounded-full w-fit mx-auto mb-6">
+                <Icon name="Shield" className="w-12 h-12 text-amber-600" />
+              </div>
+              <h4 className="font-bold mb-3 text-amber-900 text-xl">Гарантія якості</h4>
+              <p className="text-amber-700 font-semibold">100% натуральний продукт</p>
             </div>
-            <div className="text-center">
-              <Icon name="Headphones" className="w-12 h-12 text-primary mx-auto mb-4" />
-              <h4 className="font-semibold mb-2">Поддержка</h4>
-              <p className="text-gray-600">Консультации 24/7</p>
+            <div className="text-center bg-white p-8 rounded-2xl shadow-xl border-4 border-amber-200">
+              <div className="bg-amber-100 p-4 rounded-full w-fit mx-auto mb-6">
+                <Icon name="Headphones" className="w-12 h-12 text-amber-600" />
+              </div>
+              <h4 className="font-bold mb-3 text-amber-900 text-xl">Підтримка</h4>
+              <p className="text-amber-700 font-semibold">Консультації 24/7</p>
             </div>
           </div>
         </div>
       </section>
 
       {/* Contact Section */}
-      <section id="contacts" className="py-16 bg-white">
+      <section id="contacts" className="py-20 bg-white">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h3 className="text-3xl font-bold text-gray-900 mb-4">Контакты</h3>
-            <p className="text-lg text-gray-600">Свяжитесь с нами любым удобным способом</p>
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center bg-amber-200 text-amber-800 px-4 py-2 rounded-full mb-6 font-semibold">
+              <Icon name="Phone" className="w-5 h-5 mr-2" />
+              Зв'язок
+            </div>
+            <h3 className="text-4xl font-bold text-amber-900 mb-6 font-serif">Контакти</h3>
+            <p className="text-xl text-amber-700">Зв'яжіться з нами будь-яким зручним способом</p>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            <div className="text-center">
-              <Icon name="Phone" className="w-12 h-12 text-primary mx-auto mb-4" />
-              <h4 className="font-semibold mb-2">Телефон</h4>
-              <p className="text-gray-600">+380 (67) 123-45-67</p>
+          <div className="grid md:grid-cols-3 gap-10 max-w-6xl mx-auto">
+            <div className="text-center bg-gradient-to-br from-amber-50 to-orange-50 p-10 rounded-2xl shadow-xl border-4 border-amber-200">
+              <div className="bg-amber-100 p-4 rounded-full w-fit mx-auto mb-6">
+                <Icon name="Phone" className="w-12 h-12 text-amber-600" />
+              </div>
+              <h4 className="font-bold mb-4 text-amber-900 text-xl">Телефон</h4>
+              <p className="text-amber-800 font-semibold text-lg">+380 (67) 123-45-67</p>
             </div>
-            <div className="text-center">
-              <Icon name="Mail" className="w-12 h-12 text-primary mx-auto mb-4" />
-              <h4 className="font-semibold mb-2">Email</h4>
-              <p className="text-gray-600">info@dobri-bdjoly.ua</p>
+            <div className="text-center bg-gradient-to-br from-amber-50 to-orange-50 p-10 rounded-2xl shadow-xl border-4 border-amber-200">
+              <div className="bg-amber-100 p-4 rounded-full w-fit mx-auto mb-6">
+                <Icon name="Mail" className="w-12 h-12 text-amber-600" />
+              </div>
+              <h4 className="font-bold mb-4 text-amber-900 text-xl">Email</h4>
+              <p className="text-amber-800 font-semibold text-lg">info@dobri-bdjoly.ua</p>
             </div>
-            <div className="text-center">
-              <Icon name="MapPin" className="w-12 h-12 text-primary mx-auto mb-4" />
-              <h4 className="font-semibold mb-2">Адрес</h4>
-              <p className="text-gray-600">с. Медовое, Украина</p>
+            <div className="text-center bg-gradient-to-br from-amber-50 to-orange-50 p-10 rounded-2xl shadow-xl border-4 border-amber-200">
+              <div className="bg-amber-100 p-4 rounded-full w-fit mx-auto mb-6">
+                <Icon name="MapPin" className="w-12 h-12 text-amber-600" />
+              </div>
+              <h4 className="font-bold mb-4 text-amber-900 text-xl">Адреса</h4>
+              <p className="text-amber-800 font-semibold text-lg">с. Медове, Україна</p>
             </div>
           </div>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-white py-12">
+      <footer className="bg-gradient-to-r from-amber-900 to-orange-900 text-white py-16">
         <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-4 gap-10">
             <div>
-              <div className="flex items-center space-x-2 mb-4">
-                <Icon name="Hexagon" className="w-8 h-8 text-primary fill-current" />
-                <h4 className="text-xl font-bold">Добрі бджоли</h4>
+              <div className="flex items-center space-x-3 mb-6">
+                <div className="bg-amber-600 p-3 rounded-full">
+                  <Icon name="Flower2" className="w-8 h-8 text-white" />
+                </div>
+                <h4 className="text-2xl font-bold font-serif">Добрі бджоли</h4>
               </div>
-              <p className="text-gray-400">Натуральные продукты пчеловодства с собственной пасеки</p>
+              <p className="text-amber-200 text-lg">Натуральні продукти бджільництва з власної пасіки</p>
             </div>
             <div>
-              <h5 className="font-semibold mb-4">Каталог</h5>
-              <ul className="space-y-2 text-gray-400">
-                <li><a href="#" className="hover:text-white transition-colors">Мёд разнотравный</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Мёд акациевый</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Мёд гречишный</a></li>
+              <h5 className="font-bold mb-6 text-xl text-amber-100">Каталог</h5>
+              <ul className="space-y-3 text-amber-200">
+                <li><a href="#" className="hover:text-white transition-colors font-semibold">Мед різнотравний</a></li>
+                <li><a href="#" className="hover:text-white transition-colors font-semibold">Мед акацієвий</a></li>
+                <li><a href="#" className="hover:text-white transition-colors font-semibold">Мед гречаний</a></li>
               </ul>
             </div>
             <div>
-              <h5 className="font-semibold mb-4">Информация</h5>
-              <ul className="space-y-2 text-gray-400">
-                <li><a href="#about" className="hover:text-white transition-colors">О ферме</a></li>
-                <li><a href="#delivery" className="hover:text-white transition-colors">Доставка</a></li>
-                <li><a href="#contacts" className="hover:text-white transition-colors">Контакты</a></li>
+              <h5 className="font-bold mb-6 text-xl text-amber-100">Інформація</h5>
+              <ul className="space-y-3 text-amber-200">
+                <li><a href="#about" className="hover:text-white transition-colors font-semibold">Про ферму</a></li>
+                <li><a href="#delivery" className="hover:text-white transition-colors font-semibold">Доставка</a></li>
+                <li><a href="#contacts" className="hover:text-white transition-colors font-semibold">Контакти</a></li>
               </ul>
             </div>
             <div>
-              <h5 className="font-semibold mb-4">Связь</h5>
-              <div className="space-y-2 text-gray-400">
-                <p>+380 (67) 123-45-67</p>
-                <p>info@dobri-bdjoly.ua</p>
+              <h5 className="font-bold mb-6 text-xl text-amber-100">Зв'язок</h5>
+              <div className="space-y-3 text-amber-200">
+                <p className="font-semibold">+380 (67) 123-45-67</p>
+                <p className="font-semibold">info@dobri-bdjoly.ua</p>
               </div>
             </div>
           </div>
-          <div className="border-t border-gray-800 pt-8 mt-8 text-center text-gray-400">
-            <p>&copy; 2024 Добрі бджоли. Все права защищены.</p>
+          <div className="border-t border-amber-700 pt-8 mt-12 text-center text-amber-200">
+            <p className="text-lg">&copy; 2024 Добрі бджоли. Усі права захищені.</p>
           </div>
         </div>
       </footer>
